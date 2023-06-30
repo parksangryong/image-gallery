@@ -1,0 +1,27 @@
+#imageslider{
+    width: 1090px;
+    height: 860px;
+    background-color: azure;
+    overflow: hidden;
+}
+
+#my-slide-element{
+    width: 1090px !important;
+    height: 860px !important;
+}
+
+#my-slide-element img{
+    width: 1090px;
+    height: 860px;
+}
+#imageslider .slick-dots li{
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+}
+#imageslider .slick-dots{
+    z-index: 5 !important;
+    background-color: pink;
+    position: absolute;
+    bottom: -50px !important;
+}
