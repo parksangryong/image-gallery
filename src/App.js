@@ -51,6 +51,18 @@ const result = imageList.map(
 
 const txt = imageList.length;
 
+const imgDelete = (imgindex) => {
+
+  let tempImagelist = [];
+
+  for (let i = 0; i < imageList.length; i++) {
+    if(i !== imgindex){
+      tempImagelist.push(imageList[i]);
+    }
+  setImageList(tempImagelist)
+  };
+}
+
 if(imageList){
   return(
     <div id="App">
@@ -61,7 +73,7 @@ if(imageList){
         <div id='txt'>현재 : {txt}개</div>
     </div>
 
-    <Imagebox imageList={imageList} clickImg={clickImg} />
+    <Imagebox imageList={imageList} clickImg={clickImg} imgDelete={imgDelete} />
 
     <FileUploader handleChange={handleChange} 
       name="file" types={fileTypes} multiple={true}
@@ -80,7 +92,7 @@ else{
         
     </div>
 
-    <Imagebox imageList={imageList} clickImg={clickImg} />
+    <Imagebox imageList={imageList} clickImg={clickImg} imgDelete={imgDelete} />
 
     <FileUploader handleChange={handleChange} 
       name="file" types={fileTypes} multiple={true}

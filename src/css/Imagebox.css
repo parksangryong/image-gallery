@@ -4,30 +4,6 @@
     background-color: azure;
 }
 
-.imageItem{
-    width: 250px;
-    height: 250px;
-    position: relative;
-    border: 1px solid red;
-}
-
-.imageItem div{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-}
-
-.imageItem > img{
-    width: 250px;
-    height: 250px;
-    position: absolute;
-}
-
-.imageItem{
-    display: inline-block;   
-}
-
 .slick-prev::before, .slick-next::before{ 
     font-family: 'slick';
         font-size: 40px;
@@ -43,7 +19,7 @@
     top: 40%;
 }
 #prev{
-    left: 95%;
+    left: 98%;
 }
 #next{
     left: 0%;
@@ -68,6 +44,7 @@
     margin-top: 10px;
     width: 250px !important;
     height: 250px !important;
+    position: relative;
 }
 
 #imagebox #my-slide-element img{
@@ -82,5 +59,27 @@
 }
 
 #imagebox #next{
-    left: -3.75%;
+    left: -3%;
+}
+
+.dbtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dbtn:hover{
+    background-color: violet;
+}
+
+.nbtn{
+    display: none;
 }
