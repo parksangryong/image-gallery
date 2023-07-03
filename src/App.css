@@ -1,6 +1,6 @@
 #App{
-  width: 1090px;
-  height: 1125px;
+  width: 700px;
+  height: 700px;
   margin: 0 auto;
   background-color: blueviolet;
   position: relative;
@@ -19,8 +19,8 @@ a{
 }
 
 .btn{
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   position: fixed;
   bottom: 5%;
   left: 5%;
@@ -38,9 +38,9 @@ a{
 
 #txt{
   position: fixed;
-  bottom: 25%;
+  bottom: 27%;
   left: 4%;
   font-size: 50px;
   font-weight: bold;
-  color: blueviolet;
+  color: violet;
 }
