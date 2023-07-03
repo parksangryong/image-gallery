@@ -7,14 +7,13 @@ import "slick-carousel/slick/slick-theme.css";
 import { useState } from 'react';
 
 function Imagebox(props){
-
-    const [imgindex,setImgindex] = useState('')
+    const [imgindex, setImgindex] = useState('')
     const [edit, setEdit] = useState(false)
 
     const clickImg = (e) => {
         //console.log(e.target.alt);
         setEdit(!edit)
-        setImgindex(e.target.alt)
+        //setImgindex(e.target.alt)
         props.clickImg(e.target.alt)
     }
     const settings = {  
@@ -32,16 +31,17 @@ function Imagebox(props){
         centerPadding: '0px',  // 0px 하면 슬라이드 끝쪽 이미지가 안잘림
     }
 
-    const imgDelete = () => {
-        //console.log(imgindex)
+    const imgDelete = (e) => {
+        //console.log(e.target.id);
+        setImgindex(e.target.id)
         props.imgDelete(imgindex);
     }
 
     const result = props.imageList.map(
         (data,index) => (<div key={data} id='my-slide-element'>
             <img onClick={clickImg} src={URL.createObjectURL(data)} alt={index} />
-            <button onClick={imgDelete} className={edit === true? 'dbtn' : 'nbtn'}>-</button>
-            </div>)
+            <button onClick={imgDelete} id={index} className={edit === true? 'dbtn' : 'nbtn'}>-</button>
+        </div>)
       )
 
       

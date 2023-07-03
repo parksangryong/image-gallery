@@ -46,21 +46,25 @@ function App() {
 }
 
 const result = imageList.map(
-  (data) => (<div key={data} id='my-slide-element'><img src={URL.createObjectURL(data)} alt={data} /></div>)
+  (data, index) => (<div key={data} id='my-slide-element'>
+    <img src={URL.createObjectURL(data)} alt={data} />
+    </div>)
 )
 
 const txt = imageList.length;
 
 const imgDelete = (imgindex) => {
+  //console.log('imgdelete' + imgindex)
 
   let tempImagelist = [];
 
   for (let i = 0; i < imageList.length; i++) {
-    if(i !== imgindex){
+    if(i != imgindex){
       tempImagelist.push(imageList[i]);
     }
-  setImageList(tempImagelist)
   };
+  //console.log(tempImagelist)
+  setImageList(tempImagelist)
 }
 
 if(imageList){
